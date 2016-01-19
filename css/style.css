@@ -1,5 +1,12 @@
+body {
+    padding-top: 95px;
+}
 .navbar {
     border-radius: 0px;
+    margin-bottom: 0px;
+}
+.tab{
+    height:100px;
 }
 .navbar-brand {
     float: left;
@@ -10,7 +17,7 @@
 }
 .navbar-inverse .navbar-nav > li > a {
     color: #fff;
-    font: bold 1em helvetica;
+    font: bold 1.2em helvetica;
 }
 .navbar-right {
     margin-right: 40px;
@@ -21,3 +28,70 @@
 }
 .navbar-toggle {
 	margin-top: 30px;
+}
+.jumbotron {
+    box-shadow: 0 0 2px 0 rgba(50, 50, 50, 0.75) inset;
+    -webkit-box-shadow: 0 0 2px 0 rgba(50, 50, 50, 0.75) inset;
+    -moz-box-shadow:    0 0 2px 0 rgba(50, 50, 50, 0.75) inset;
+}
+.jumbotron{
+    background-image: url(../images/main-photo.jpg);
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    margin-top: -95px;
+}
+/*.navbar-inverse{
+    background-color:#222;
+    border-color:#080808
+}*/
+.h4, h4 {
+    line-height: 26px;
+    text-align: justify;
+}
+.page-header {
+    border-bottom: none;
+    margin: 40px 0 35px;
+    padding-bottom: 9px;
+}
+.photo-aboutme{
+    background-image: url("../images/me.jpg");
+    background-position: 1px center;
+    background-size: 100% auto;
+    border-radius: 300px;
+    display: block;
+    height: 300px;
+    width: 300px;
+}
+.tools{
+    background-color: #999;
+    margin-top: 60px;
+}
+.logos{
+    float: right;
+    margin-top: 10px;
+    position: relative;
+}
+.logos img{
+    margin-left: 10px;
+}
+.logos-title{
+    float:left;
+    margin-top: 22px;
+    margin-left: 15px;
+}
+.sticky{
+    background-color:#222;
+}
+.navbar-fixed-top{
+    transition: all 0.4s ease;
+}
+.portfolio-container{
+    background-image: url(../images/main-photo.jpg);
+    background-size: cover;
+    height: 100%;
+    position: relative;
+}
+.portfolio-container h1{
+    font-size:63px;
+}
