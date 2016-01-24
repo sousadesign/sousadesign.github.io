@@ -17,11 +17,11 @@ body {
 }
 .navbar-inverse .navbar-nav > li > a {
     color: #fff;
-    font: bold 1.2em helvetica;
+    font: bold 0.9em helvetica;
 }
 .navbar-right {
     margin-right: 40px;
-    margin-top: 23px;
+    margin-top: 25px;
 }
 .container-fluid {
     width: 90%;
@@ -46,6 +46,9 @@ body {
     background-color:#222;
     border-color:#080808
 }*/
+a:focus, a:hover{
+    text-decoration:none;
+}
 .h4, h4 {
     line-height: 26px;
     text-align: justify;
@@ -136,5 +139,17 @@ body {
     font-weight: bold;
     text-align: center;
     text-shadow: 1px 1px 1px black;
-    margin-top: 150px;
+    margin-top: 15%;
+}
+.navbar-inverse .navbar-toggle {
+    background-color: #333;
+}
+.row{
+    margin-bottom: 65px;
+}
+@media screen and (max-width: 760px) {
+    #bs-example-navbar-collapse-1 {
+        background-color: #222;
+        border-radius: 0 0 10px 10px;
+    }
 }
