@@ -11,7 +11,10 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!--Stylesheet-->
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="icon" href="images/me.jpg" />
+	<link rel="stylesheet" href="css/animate.css">
+	<!--New code-->	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<!--New code--><script src="js/modernizr.custom.js"></script>
+	<link rel="icon" href="images/favicon.png" />
   </head>
   <body>
 
@@ -104,9 +107,9 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="#about">About <span class="sr-only">(current)</span></a></li>
-		        <li><a href="#portfolio">Portfolio</a></li>
-		        <li><a href="#contact">Contact</a></li>
+		        <li><a href="#about">ABOUT <span class="sr-only">(current)</span></a></li>
+		        <li><a href="#portfolio">PORTFOLIO</a></li>
+		        <li><a href="#contact">CONTACT</a></li>
 		      </ul>
 	<!-- 		      <form class="navbar-form navbar-left" role="search">
 			        <div class="form-group">
@@ -123,7 +126,7 @@
 	<div class="jumbotron">
 		<div class="tab"></div>
 		  <div class="container">
-		    	<h1>Web design in all its diversities</h1>
+		    	<h1 class="animated fadeInUp">Web design in all its diversities</h1>
 		  </div>
 	</div>
 	<div class="about-section" style="margin-bottom: 120px;">
@@ -177,8 +180,8 @@
 		</div>
 
 		<section>
-			<div class="row">
-  					<div class="col-xs-6 col-md-3">
+			<div class="row scrolling animated">
+  				<!--<div class="col-xs-6 col-md-3">
     					<a href="http://www.mashupia.com/" class="thumbnail" target="_blank">
      			 			<img src="images/mashup.jpg" alt="...">
    						 </a>
@@ -202,6 +205,66 @@
     					<a href="http://www.vuica.com.ve/" class="thumbnail" target="_blank">
      			 			<img src="images/vuica.jpg" alt="...">
    						 </a>
+  					</div>-->
+  					<div class=" col-xs-6 col-md-3 grid cs-style-1">
+  						<li>
+							<figure>
+								<img src="images/mashup.jpg" alt="img01">
+								<figcaption>
+									<h3>Mashup</h3>
+									<span>E-commerce site developed with Magento for selling building supplies</span>
+									<a href="http://www.mashupia.com/" target="_blank">Take a look</a>
+								</figcaption>
+							</figure>
+						</li>
+  					</div>
+  					<div class=" col-xs-6 col-md-3 grid cs-style-1">
+  						<li>
+							<figure>
+								<img src="images/advanceaguas.jpg" alt="img01">
+								<figcaption>
+									<h3>Advance Aguas</h3>
+									<span>E-commerce site developed with Magento for selling building supplies</span>
+									<a href="https://web.archive.org/web/20150713191333/http://www.advanceaguas.com/" target="_blank">Take a look</a>
+								</figcaption>
+							</figure>
+						</li>
+  					</div>
+  					<div class=" col-xs-6 col-md-3 grid cs-style-1">
+  						<li>
+							<figure>
+								<img src="images/viajaverde.jpg" alt="img01">
+								<figcaption>
+									<h3>Viaja Verde</h3>
+									<span>E-commerce site developed with Magento for selling building supplies</span>
+									<a href="http://www.viajaverde.com/index.php/es/" target="_blank">Take a look</a>
+								</figcaption>
+							</figure>
+						</li>
+  					</div>
+  					<div class=" col-xs-6 col-md-3 grid cs-style-1">
+  						<li>
+							<figure>
+								<img src="images/capitalfin.jpg" alt="img01">
+								<figcaption>
+									<h3>Vuica Ve</h3>
+									<span>E-commerce site developed with Magento for selling building supplies</span>
+									<a href="http://www.capitalfin.net/" target="_blank">Take a look</a>
+								</figcaption>
+							</figure>
+						</li>
+  					</div>
+  					<div class=" col-xs-6 col-md-3 grid cs-style-1">
+  						<li>
+							<figure>
+								<img src="images/vuica.jpg" alt="img01">
+								<figcaption>
+									<h3>Vuica Ve</h3>
+									<span>E-commerce site developed with Magento for selling building supplies</span>
+									<a href="http://www.vuica.com.ve/" target="_blank">Take a look</a>
+								</figcaption>
+							</figure>
+						</li>
   					</div>
 			</div>
 		</section>
@@ -240,7 +303,7 @@
 			</section>
 		</div>
     </div>
-
+	<!--New code-->		<script src="js/toucheffects.js"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -291,6 +354,24 @@ $('.goTop').click(
             $('html,body').animate({scrollTop:'0px'}, 500);return false;
       }
 );
+</script>
+<script>
+$(document).ready(function () {
+  $(".navbar-nav li a").click(function(event) {
+    $(".navbar-collapse").collapse('hide');
+  });
+});
+</script>
+<!--Animation while scrolling-->
+<script>
+$(window).scroll(function() {
+		if ($(this).scrollTop() > 700){  
+		    $('.scrolling').addClass("fadeInUp");
+		  }
+		  else{
+		    $('.scrolling').removeClass("fadeInUp");
+		  }
+		});
 </script>
   </body>
 </html>
