@@ -66,6 +66,11 @@ a:focus, a:hover{
     display: block;
     height: 300px;
     width: 300px;
+    border: 6px double white;
+}
+.text-aboutme h4{
+    font: 23px/35px Helvetica;
+    text-align: center;
 }
 .tools{
     background-color: #999;
@@ -144,12 +149,31 @@ a:focus, a:hover{
 .navbar-inverse .navbar-toggle {
     background-color: #333;
 }
-.row{
+.scrolling{
     margin-bottom: 65px;
 }
 @media screen and (max-width: 760px) {
     #bs-example-navbar-collapse-1 {
         background-color: #222;
         border-radius: 0 0 10px 10px;
+    }
+    .text-aboutme h4 {
+    font: 16px/26px Helvetica;
+    text-align: center;
+    }
+    .photo-aboutme {
+    border: 3px double white;
+    float: left;
+    height: 200px;
+    margin-right: 40px;
+    width: 200px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .photo-aboutme {
+    border: none;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
     }
 }
