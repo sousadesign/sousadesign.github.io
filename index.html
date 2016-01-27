@@ -144,6 +144,7 @@
 					</div>
 					<div class="col-md-6">
 						<div class="text-aboutme">
+							<h3>Andres De Sousa</h3>
 							<h4>Experienced, self-motivated and analytical web & graphic designer with a keen eye for details; skilled at synthesizing and editing information to achieve overall objectives. Proficient in creating dynamic and static sites through, organized coding along with minimalistic design. Currently residing in Chicago, IL. </h4>
 						</div>
 					</div>
@@ -279,18 +280,18 @@
 				<div class="row">
 					<div class="col-md-5">
 						<div class="contact-info">
-							<img src="images/email.png" alt="">
-							<a href="mailto:andresdesousa90@gmail.com">andresdesousa90@gmail.com</a>
+							
+							<a href="mailto:andresdesousa90@gmail.com"><span class="icon-mail"></span>andresdesousa90@gmail.com</a>
 						</div>
 						<div class="contact-info">
-							<img src="images/add.png" alt="">
-							<span>+1 (773) 9499103</span>
+							<span class="icon-phone"></span>
+							<a>+1 (773) 9499103</a>
 						</div>
 						<div class="contact-info">
-							<a href="https://ve.linkedin.com/in/andrés-de-sousa-89b48380" target="_blank"><img src="images/in.png" alt=""></a>
+							<a href="https://ve.linkedin.com/in/andrés-de-sousa-89b48380" target="_blank"><span class="icon-linkedin"></span></a>
 						</div>
 						<div class="contact-info">
-							<a href="#" target="_blank"><img src="images/be.png" alt=""></a>
+							<a href="#" target="_blank"><span class="icon-behance"></span></a>
 						</div>
 					</div>
 					<div class="col-md-7">
@@ -305,7 +306,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script>
+    <script async>
 		    	$(window).scroll(function() {
 		if ($(this).scrollTop() > 1){  
 		    $('.navbar-fixed-top').addClass("sticky");
@@ -316,7 +317,7 @@
 		});
     </script>
 
-<script>
+<script async>
 	$(function(){
 
      $('a[href*=#]').click(function() {
@@ -344,7 +345,7 @@
 
 });
 </script>
-<script>
+<script async>
 $('.goTop').click(
       function()
       {
@@ -352,7 +353,7 @@ $('.goTop').click(
       }
 );
 </script>
-<script>
+<script async>
 $(document).ready(function () {
   $(".navbar-nav li a").click(function(event) {
     $(".navbar-collapse").collapse('hide');
@@ -360,7 +361,7 @@ $(document).ready(function () {
 });
 </script>
 <!--Animation while scrolling-->
-<script>
+<script async>
 $(window).scroll(function() {
 		if ($(this).scrollTop() > 700){  
 		    $('.scrolling').addClass("fadeInUp");
