@@ -1,3 +1,43 @@
+/*--Icon Fonts-*/
+@font-face {
+    font-family: 'icomoon';
+    src:    url('../fonts/icomoon.eot?pb1i2j');
+    src:    url('../fonts/icomoon.eot?pb1i2j#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?pb1i2j') format('truetype'),
+        url('../fonts/icomoon.woff?pb1i2j') format('woff'),
+        url('../fonts/icomoon.svg?pb1i2j#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mail:before {
+    content: "\e900";
+}
+.icon-phone:before {
+    content: "\e901";
+}
+.icon-behance:before {
+    content: "\e902";
+}
+.icon-linkedin:before {
+    content: "\e903";
+}
+/*--Icon Fonts-*/
 body {
     padding-top: 95px;
 }
@@ -66,10 +106,13 @@ a:focus, a:hover{
     display: block;
     height: 300px;
     width: 300px;
-    border: 6px double white;
 }
 .text-aboutme h4{
     font: 23px/35px Helvetica;
+    text-align: center;
+}
+.text-aboutme h3{
+    font: bold 23px/35px Helvetica;
     text-align: center;
 }
 .tools{
@@ -129,6 +172,8 @@ a:focus, a:hover{
 }
 .contact-info span{
     color:#fff;
+    font-size: 1.5em;
+    margin-right: 15px;
 }
 .contact-info img{
     margin-right:15px;
@@ -162,7 +207,6 @@ a:focus, a:hover{
     text-align: center;
     }
     .photo-aboutme {
-    border: 3px double white;
     float: left;
     height: 200px;
     margin-right: 40px;
@@ -171,7 +215,6 @@ a:focus, a:hover{
 }
 @media screen and (max-width: 320px) {
     .photo-aboutme {
-    border: none;
     float: none;
     margin-left: auto;
     margin-right: auto;
