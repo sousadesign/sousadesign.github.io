@@ -66,7 +66,7 @@ body {
     font: bold 0.9em helvetica;
 }
 .navbar-right {
-    margin-top: 25px;
+    margin-top: 20px;
 }
 .container-fluid {
     width: 90%;
@@ -443,7 +443,7 @@ a:focus, a:hover{
     height: 100%;
     padding: 12px;
     text-align: center;
-    line-height: normal;
+    line-height: 14px;
 }
 .portfolio-description h3{
     margin-top:5px;
