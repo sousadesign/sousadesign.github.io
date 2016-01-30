@@ -17,7 +17,7 @@
   <body>
 
 		<nav class="navbar navbar-inverse navbar-fixed-top">
-		  <div class="container-fluid">
+		  <div class="container">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
 		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -135,7 +135,7 @@
 			</div>
 
 			<section>
-				<div class="row">
+				<div class="row container" style="margin-bottom: 60px;">
 					<div class="col-md-6">
 						<a class="photo-aboutme"></a>
 					</div>
@@ -144,6 +144,18 @@
 							<h3>Andres De Sousa</h3>
 							<h4>Experienced, self-motivated and analytical web & graphic designer with a keen eye for details; skilled at synthesizing and editing information to achieve overall objectives. Proficient in creating dynamic and static sites through, organized coding along with minimalistic design. Currently residing in Chicago, IL. </h4>
 						</div>
+					</div>
+				</div>
+
+				<div class="row container">
+
+					<div class="col-md-12">
+
+						<div style="width: 100%">
+							<canvas id="canvas" height="450" width="600"></canvas>
+						</div>
+
+
 					</div>
 				</div>
 			</section>
@@ -351,7 +363,40 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script async>
+    <!-- New code --> <script src="js/Chart.js"></script>
+
+<!-- new script -->
+	<script>
+	var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+
+	var barChartData = {
+		labels : ["HTML5","CSS3","Jquery","Javascript","Bootstrap","Photoshop CC","Lightroom CC","Illustrator CC","Indesign CC","Worpress","Magento","Joomla"],
+		datasets : [
+			{
+				fillColor : "rgba(220,220,220,0.5)",
+				strokeColor : "rgba(220,220,220,0.8)",
+				highlightFill: "rgba(57,65,104,0.35)",
+				highlightStroke: "rgba(220,220,220,1)",
+				data : [50,50,35,20,45,50,50,50,40,45,35,35]
+			},
+
+		]
+
+	}
+	
+	window.onload = function(){
+		var ctx = document.getElementById("canvas").getContext("2d");
+		window.myBar = new Chart(ctx).Bar(barChartData, {
+			responsive : true
+		});
+	}
+
+
+	</script>
+
+<!-- new script -->
+
+    <script>
 		    	$(window).scroll(function() {
 		if ($(this).scrollTop() > 1){  
 		    $('.navbar-fixed-top').addClass("sticky");
@@ -362,7 +407,7 @@
 		});
     </script>
 
-<script async>
+<script>
 	$(function(){
 
      $('a[href*=#]').click(function() {
@@ -390,7 +435,7 @@
 
 });
 </script>
-<script async>
+<script>
 $('.goTop').click(
       function()
       {
@@ -398,7 +443,7 @@ $('.goTop').click(
       }
 );
 </script>
-<script async>
+<script>
 $(document).ready(function () {
   $(".navbar-nav li a").click(function(event) {
     $(".navbar-collapse").collapse('hide');
@@ -406,9 +451,9 @@ $(document).ready(function () {
 });
 </script>
 <!--Animation while scrolling-->
-<script async>
+<script>
 $(window).scroll(function() {
-		if ($(this).scrollTop() > 700){  
+		if ($(this).scrollTop() > 1200){  
 		    $('.scrolling').addClass("fadeInUp");
 		  }
 		  else{
