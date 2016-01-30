@@ -500,7 +500,7 @@ a:focus, a:hover{
     }
     .navbar-brand {
         padding: 11px;
-        height: 0px;
+        height: 64px;
     }
 }
 @media screen and (max-width: 360px) {
