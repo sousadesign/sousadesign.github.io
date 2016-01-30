@@ -461,7 +461,7 @@ a:focus, a:hover{
     padding: 6px;
     width: 50%;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     #bs-example-navbar-collapse-1 {
         background-color: #222;
     }
@@ -482,9 +482,9 @@ a:focus, a:hover{
     .navbar-inverse{
         background-color:#222;
     }
-}
-@media screen and (max-width: 360px) {
-    .svg-logo{
+
+
+        .svg-logo{
         height: 45px;
         margin-left: 0;
         position: relative;
@@ -502,6 +502,28 @@ a:focus, a:hover{
         padding: 11px;
         height: 0px;
     }
+}
+@media screen and (max-width: 360px) {
+/*    .svg-logo{
+        height: 45px;
+        margin-left: 0;
+        position: relative;
+        width: 110px;
+    }
+    .navbar-toggle {
+        margin-bottom: 16px;
+        margin-top: 15px;
+    }
+    .navbar-inverse{
+        background-color:#222;
+        height: 65px;
+    }
+    .navbar-brand {
+        padding: 11px;
+        height: 0px;
+    }*/
+
+    
     .photo-aboutme {
         margin-left: auto;
         margin-right: auto;
