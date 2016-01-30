@@ -41,6 +41,12 @@
 body {
     padding-top: 95px;
 }
+.svg-logo{
+    height: 70px;
+    margin-left: 25px;
+    position: relative;
+    width: 150px;
+}
 .navbar {
     border-radius: 0px;
     margin-bottom: 0px;
@@ -86,6 +92,9 @@ body {
     background-color:#222;
     border-color:#080808
 }*/
+.title-indent{
+    height:100px;
+}
 a:focus, a:hover{
     text-decoration:none;
 }
@@ -102,10 +111,12 @@ a:focus, a:hover{
     background-image: url("../images/me.jpg");
     background-position: 1px center;
     background-size: 100% auto;
-    border-radius: 300px;
+    border-radius: 100%;
     display: block;
     height: 300px;
     width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .text-aboutme h4{
     font: 23px/35px Helvetica;
@@ -179,7 +190,12 @@ a:focus, a:hover{
     margin-right:15px;
 }
 .thumbnail{
-    background-color: rgba(255, 255, 255, 0.5);
+    /*background-color: rgba(255, 255, 255, 0.5);*/
+    border: 0px solid #fff;
+    border-radius: 0px;
+    margin-bottom: 20px;
+    padding: 0px;
+    transition: border 0.2s ease-in-out 0s;
 }
 .thumbnail img{
     width:400px;
@@ -197,26 +213,306 @@ a:focus, a:hover{
 .scrolling{
     margin-bottom: 65px;
 }
-@media screen and (max-width: 760px) {
+
+/*---------------Code Flipper------------------*/
+.flip-container {
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -o-perspective: 1000;
+    perspective: 1000;
+}
+
+.flip-container, .front, .back {
+  /*  width: 320px;
+    height: 480px;*/
+}
+
+.flipper {
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+
+    position: relative;
+}
+
+.front, .back {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+
+    -moz-transition: 0.6s;
+    -moz-transform-style: preserve-3d;
+
+    -o-transition: 0.6s;
+    -o-transform-style: preserve-3d;
+
+    -ms-transition: 0.6s;
+    -ms-transform-style: preserve-3d;
+
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.back {
+    width: 100%;
+    height: 100%;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.flip-container:hover .back, .flip-container.hover .back {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.flip-container:hover .front, .flip-container.hover .front {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+
+.front {
+    z-index: 2;
+}
+.flip-container {
+     /* 1 */
+    /* For Firefox <= 15 to apply perspective. Without these two lines transformation will be flat.
+    This fix, however, doesn’t apply if we put overflow property on the element being fixed.
+    */
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d; 
+}
+
+.front {
+     /* 2 */
+    /*Fix for Chrome, version <= 22*/    
+    position:relative;
+      -webkit-transform: rotateY(0deg);
+
+    /* or this
+    -webkit-transform: translate3d(0, 0, 0);
+     any property that triggers hardware acceleration will do the trick
+    */
+}
+
+.grid {
+/*  padding: 20px 20px 100px 20px;
+    max-width: 1300px;*/
+    margin: 30px 0 auto;
+    list-style: none;
+    text-align: center;
+}
+
+.grid li {
+/*  display: inline-block;
+    width: 440px;*/
+    margin: 0;
+    /*padding: 20px;*/
+    text-align: left;
+    position: relative;
+}
+
+.grid figure {
+    margin: 0;
+    position: relative;
+}
+
+.grid figure img {
+    max-width: 100%;
+    display: block;
+    position: relative;
+}
+
+.grid figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background: #222;
+    color: #e4d9ff;
+}
+
+.grid figcaption h3 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.grid figcaption span:before {
+    content: '';
+}
+
+.grid figcaption a {
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 2px;
+    display: inline-block;
+    background: #273469;
+    color: #fff;
+}
+
+/* Individual Caption Styles */
+
+/* Caption Style 1 */
+.cs-style-1 figcaption {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    text-align: center;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.no-touch .cs-style-1 figure:hover figcaption,
+.cs-style-1 figure.cs-hover figcaption {
+    opacity: 1;
+    -webkit-transform: translate(15px, 15px);
+    -moz-transform: translate(15px, 15px);
+    -ms-transform: translate(15px, 15px);
+    transform: translate(15px, 15px);
+}
+
+.cs-style-1 figcaption h3 {
+    /*margin-top: 70px;*/
+}
+
+.cs-style-1 figcaption span {
+    display: block;
+}
+
+.cs-style-1 figcaption a {
+    margin-top: 30px;
+}
+
+
+
+@media screen and (max-width: 31.5em) {
+    .grid {
+        /*padding: 10px 10px 100px 10px;*/
+    }
+    .grid li {
+        width: 100%;
+        /*min-width: 300px;*/
+    }
+    .no-touch .cs-style-1 figure:hover figcaption,
+.cs-style-1 figure.cs-hover figcaption {
+    opacity: 1;
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+    }
+    .cs-style-1 figcaption h3{
+        display:none;
+    }
+    .cs-style-1 figcaption span{
+        display:none;
+    }
+    .cs-style-1 figcaption a{
+        margin-top:0px;
+    }
+}
+
+
+
+
+/*---------------Code Flipper------------------*/
+
+.portfolio-description{
+    background-color: #394168;
+    color: white;
+    height: 100%;
+    padding: 12px;
+    text-align: center;
+    line-height: normal;
+}
+.portfolio-description h3{
+    margin-top:5px;
+}
+.portfolio-description span{
+   font-size:0.9em;
+}
+.portfolio-description a{
+    background-color: #FFE066;
+    border-radius: 2px;
+    color: #394168;
+    display: block;
+    margin: 10px auto;
+    padding: 6px;
+    width: 50%;
+}
+@media screen and (max-width: 767px) {
     #bs-example-navbar-collapse-1 {
         background-color: #222;
-        border-radius: 0 0 10px 10px;
     }
     .text-aboutme h4 {
     font: 16px/26px Helvetica;
     text-align: center;
     }
     .photo-aboutme {
-    float: left;
     height: 200px;
     margin-right: 40px;
     width: 200px;
-    }
-}
-@media screen and (max-width: 320px) {
-    .photo-aboutme {
-    float: none;
     margin-left: auto;
     margin-right: auto;
+    }
+    .container-fluid {
+    width: 100%;
+    }
+    .navbar-inverse{
+        background-color:#222;
+    }
+}
+@media screen and (max-width: 360px) {
+    .svg-logo{
+        height: 45px;
+        margin-left: 0;
+        position: relative;
+        width: 110px;
+    }
+    .navbar-toggle {
+        margin-bottom: 16px;
+        margin-top: 15px;
+    }
+    .navbar-inverse{
+        background-color:#222;
+        height: 65px;
+    }
+    .navbar-brand {
+        padding: 11px;
+        height: 0px;
+    }
+    .photo-aboutme {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .title-indent{
+        height:40px;
+    }
+    .portfolio-description span{
+        display:none;
+    }
+    .portfolio-description a{
+    width: 100%;
     }
 }
