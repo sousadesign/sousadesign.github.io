@@ -463,6 +463,7 @@ a:focus, a:hover{
 @media screen and (max-width: 767px) {
     #bs-example-navbar-collapse-1 {
         background-color: #222;
+        margin-top: 0;
     }
     .text-aboutme h4 {
     font: 16px/26px Helvetica;
