@@ -82,6 +82,7 @@ body {
 .jumbotron{
     background-image: url(../images/main-photo.jpg);
     background-attachment: fixed;
+    background-position: center center;
     background-size: cover;
     height: 100vh;
     position: relative;
@@ -503,8 +504,28 @@ a:focus, a:hover{
         height: 64px;
     }
 }
+
+@media screen and (min-device-width: 360px) and (max-device-width: 766px) {
+    .col-xs-12 {
+        width: 49%;
+    }
+    .portfolio-description span{
+        display:none;
+    }
+}
+
+@media screen and (min-device-width: 568px) and (max-device-width: 766px) {
+
+    .portfolio-description span{
+        display:block;
+    }
+}
+
 @media screen and (max-width: 360px) {
 
+    .jumbotron {
+        background-position: -367px center;
+    }
     
     .photo-aboutme {
         margin-left: auto;
@@ -512,9 +533,6 @@ a:focus, a:hover{
     }
     .title-indent{
         height:40px;
-    }
-    .portfolio-description span{
-        display:none;
     }
     .portfolio-description a{
     width: 100%;
