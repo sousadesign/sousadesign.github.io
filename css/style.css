@@ -1,3 +1,5 @@
+/* Typography*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
 /*--Icon Fonts-*/
 @font-face {
     font-family: 'icomoon';
@@ -40,6 +42,16 @@
 /*--Icon Fonts-*/
 body {
     padding-top: 95px;
+}
+h1, h2, h3, h4, span{
+    font-family: 'Roboto', sans-serif;
+}
+h3{
+    font-weight:bold;
+}
+span{
+    font-size: 1.1em;
+    line-height: 1em;
 }
 .svg-logo{
     height: 70px;
@@ -99,7 +111,7 @@ a:focus, a:hover{
     text-decoration:none;
 }
 .h4, h4 {
-    line-height: 26px;
+    line-height: 1.7em;
     text-align: justify;
 }
 .page-header {
@@ -119,11 +131,11 @@ a:focus, a:hover{
     margin-right: auto;
 }
 .text-aboutme h4{
-    font: 23px/35px Helvetica;
     text-align: center;
+    font-size: 1.4em;
 }
 .text-aboutme h3{
-    font: bold 23px/35px Helvetica;
+    font: bold 1.5em/2em;
     text-align: center;
 }
 .tools{
@@ -164,7 +176,7 @@ a:focus, a:hover{
     font-size:63px;
 }
 .page-header h1{
-    font-size:30px;
+    font-size:2.3em;
     font-weight:bold;
 }
 .contact{
@@ -449,9 +461,9 @@ a:focus, a:hover{
 .portfolio-description h3{
     margin-top:5px;
 }
-.portfolio-description span{
+/*.portfolio-description span{
    font-size:0.9em;
-}
+}*/
 .portfolio-description a{
     background-color: #FFE066;
     border-radius: 2px;
@@ -537,4 +549,16 @@ a:focus, a:hover{
     .portfolio-description a{
     width: 100%;
     }
+    span {
+    font-size: 1.2em;
+    line-height: 1.2em;
+    }
+}
+.sticky ul li a:hover{
+    color:black!important;
+    transition:0.5s ease all;
+}
+.sticky ul li:hover{
+    background-color:white;
+    transition:0.5s ease all;
 }

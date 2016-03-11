@@ -15,7 +15,6 @@
 	<link rel="icon" href="images/favicon.png" />
   </head>
   <body>
-
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 		  <div class="container">
 		    <!-- Brand and toggle get grouped for better mobile display -->
@@ -135,7 +134,7 @@
 			</div>
 
 			<section>
-				<div class="row container" style="margin-bottom: 60px;">
+				<div class="row container animated" style="margin-bottom: 60px;">
 					<div class="col-md-6">
 						<a class="photo-aboutme"></a>
 					</div>
@@ -186,70 +185,6 @@
 	  		<h1>Portfolio <small></small></h1>
 		</div>
 
-		<!-- <section>
-			<div class="row scrolling animated">
-  					<div class=" col-xs-6 col-md-3 grid cs-style-1">
-  						<li>
-							<figure>
-								<img src="images/mashup.jpg" alt="img01">
-								<figcaption>
-									<h3>Mashup</h3>
-									<span>Agency site powered by wordpress.</span>
-									<a href="http://www.mashupia.com/" target="_blank">Take a look</a>
-								</figcaption>
-							</figure>
-						</li>
-  					</div>
-  					<div class=" col-xs-6 col-md-3 grid cs-style-1">
-  						<li>
-							<figure>
-								<img src="images/advanceaguas.jpg" alt="img01">
-								<figcaption>
-									<h3>Advance Aguas</h3>
-									<span>E-commerce site developed with Magento for selling dosing systems and water treatment necessities in Panama, Costa Rica and Venezuela.</span>
-									<a href="https://web.archive.org/web/20150713191333/http://www.advanceaguas.com/" target="_blank">Take a look</a>
-								</figcaption>
-							</figure>
-						</li>
-  					</div>
-  					<div class=" col-xs-6 col-md-3 grid cs-style-1">
-  						<li>
-							<figure>
-								<img src="images/viajaverde.jpg" alt="img01">
-								<figcaption>
-									<h3>Viaja Verde</h3>
-									<span>Traveling agency site powered by Joomla.</span>
-									<a href="http://www.viajaverde.com/index.php/es/" target="_blank">Take a look</a>
-								</figcaption>
-							</figure>
-						</li>
-  					</div>
-  					<div class=" col-xs-6 col-md-3 grid cs-style-1">
-  						<li>
-							<figure>
-								<img src="images/capitalfin.jpg" alt="img01">
-								<figcaption>
-									<h3>Capitalfin</h3>
-									<span>Brokerage firm site powered by Wordpress.</span>
-									<a href="http://www.capitalfin.net/" target="_blank">Take a look</a>
-								</figcaption>
-							</figure>
-						</li>
-  					</div>
-  					<div class=" col-xs-6 col-md-3 grid cs-style-1">
-  						<li>
-							<figure>
-								<img src="images/vuica.jpg" alt="img01">
-								<figcaption>
-									<h3>Vuica Ve</h3>
-									<span>E-commerce site developed with Magento for selling building supplies</span>
-									<a href="http://www.vuica.com.ve/" target="_blank">Take a look</a>
-								</figcaption>
-							</figure>
-						</li>
-  					</div>
-			</div>
-		</section> -->
 		<section>
 			<div class="row scrolling animated ">
 				<div class="col-xs-12 col-sm-6 col-md-3 grid cs-style-1 flipper flip-container" ontouchstart="this.classList.toggle('hover');">
@@ -363,9 +298,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- New code --> <script src="js/Chart.js"></script>
+ <!-- New sChart --> <script src="js/Chart.js"></script>
 
-<!-- new script -->
+<!-- new sChart -->
 	<script>
 	var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
 
@@ -407,59 +342,69 @@
 		});
     </script>
 
-<script>
-	$(function(){
+	<script>
+		$(function(){
 
-     $('a[href*=#]').click(function() {
+	     $('a[href*=#]').click(function() {
 
-     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-         && location.hostname == this.hostname) {
+	     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+	         && location.hostname == this.hostname) {
 
-             var $target = $(this.hash);
+	             var $target = $(this.hash);
 
-             $target = $target.length && $target || $("[name=' + this.hash.slice(1) +']");
+	             $target = $target.length && $target || $("[name=' + this.hash.slice(1) +']");
 
-             if ($target.length) {
+	             if ($target.length) {
 
-                 var targetOffset = $target.offset().top;
+	                 var targetOffset = $target.offset().top;
 
-                 $('html,body').animate({scrollTop: targetOffset}, 1000);
+	                 $('html,body').animate({scrollTop: targetOffset}, 1000);
 
-                 return false;
+	                 return false;
 
-            }
+	            }
 
-       }
+	       }
 
-   });
+	   });
 
-});
-</script>
-<script>
-$('.goTop').click(
-      function()
-      {
-            $('html,body').animate({scrollTop:'0px'}, 500);return false;
-      }
-);
-</script>
-<script>
-$(document).ready(function () {
-  $(".navbar-nav li a").click(function(event) {
-    $(".navbar-collapse").collapse('hide');
-  });
-});
-</script>
+	});
+	</script>
+	<script>
+	$('.goTop').click(
+	      function()
+	      {
+	            $('html,body').animate({scrollTop:'0px'}, 500);return false;
+	      }
+	);
+	</script>
+	<script>
+	$(document).ready(function () {
+	  $(".navbar-nav li a").click(function(event) {
+	    $(".navbar-collapse").collapse('hide');
+	  });
+	});
+	</script>
 <!--Animation while scrolling-->
-<script>
-$(window).scroll(function() {
-		if ($(this).scrollTop() > 1200){  
-		    $('.scrolling').addClass("fadeInUp");
-		  }
-		  else{
-		    $('.scrolling').removeClass("fadeInUp");
-		  }
-		});
-</script>
+	<script>
+	$(window).scroll(function() {
+			if ($(this).scrollTop() > 1200){  
+			    $('.scrolling').addClass("fadeInUp");
+			  }
+			  else{
+			    $('.scrolling').removeClass("fadeInUp");
+			  }
+			});
+	</script>
+	<script>
+	$(window).scroll(function() {
+			if ($(this).scrollTop() > 200){  
+			    $('.animated').addClass("fadeInUp");
+			  }
+			  else{
+			    $('.animated').removeClass("fadeInUp");
+			  }
+			});
+	</script>
   </body>
 </html>
