@@ -42,8 +42,9 @@
 /*--Icon Fonts-*/
 body {
     padding-top: 95px;
+    background-color: whitesmoke;
 }
-h1, h2, h3, h4, span{
+h1, h2, h3, h4, span a{
     font-family: 'Roboto', sans-serif;
 }
 h3{
@@ -160,7 +161,7 @@ a:focus, a:hover{
     font-size:24px;
 }
 .sticky{
-    background-color:#222;
+    background-color:#000;
 }
 .navbar-fixed-top{
     transition: all 0.4s ease;
@@ -180,7 +181,7 @@ a:focus, a:hover{
     font-weight:bold;
 }
 .contact{
-    background-color:#222;
+    background-color:#000;
 }
 .contact h1{
     color:#fff;
@@ -464,7 +465,7 @@ a:focus, a:hover{
 /*.portfolio-description span{
    font-size:0.9em;
 }*/
-.portfolio-description a{
+.portfolio-description button{
     background-color: #FFE066;
     border-radius: 2px;
     color: #394168;
@@ -472,11 +473,12 @@ a:focus, a:hover{
     margin: 10px auto;
     padding: 6px;
     width: 50%;
+    border:0;
 }
 @media screen and (max-width: 767px) {
     #bs-example-navbar-collapse-1 {
-        background-color: #222;
         margin-top: 0;
+        background-color: #222;
     }
     .text-aboutme h4 {
     font: 16px/26px Helvetica;
@@ -493,7 +495,7 @@ a:focus, a:hover{
     width: 100%;
     }
     .navbar-inverse{
-        background-color:#222;
+        background-color:#000;
     }
 
 
@@ -508,7 +510,7 @@ a:focus, a:hover{
         margin-top: 14px;
     }
     .navbar-inverse{
-        background-color:#222;
+        background-color:#000;
         height: 65px;
     }
     .navbar-brand {
