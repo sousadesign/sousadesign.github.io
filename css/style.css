@@ -475,6 +475,12 @@ a:focus, a:hover{
     width: 50%;
     border:0;
 }
+@media screen and (min-width: 990px) and (max-width: 1200px) {
+    .portfolio-description span{
+        display:none;
+    }
+}
+
 @media screen and (max-width: 767px) {
     #bs-example-navbar-collapse-1 {
         margin-top: 0;
