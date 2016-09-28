@@ -179,6 +179,10 @@ a:focus, a:hover{
 .page-header h1{
     font-size:2.3em;
     font-weight:bold;
+    text-align: center;
+}
+iframe {
+    margin-top: 40px;
 }
 .contact{
     background-color:#000;
@@ -186,18 +190,17 @@ a:focus, a:hover{
 .contact h1{
     color:#fff;
 }
-.contact-info{
-    float:left;
-    width:250px;
-    margin-bottom: 15px;
+.contact-info {
+    float: left;
+    text-align: center;
+    width: 25%;
 }
 .contact-info a{
     color:#fff;
 }
-.contact-info span{
-    color:#fff;
+.contact-info span {
+    color: #fff;
     font-size: 1.5em;
-    margin-right: 15px;
 }
 .contact-info img{
     margin-right:15px;
