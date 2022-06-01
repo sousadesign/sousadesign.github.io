@@ -32,5 +32,8 @@
 @color-primary: #D0102D;
 @color-secondary: #FDDB00;
 @color-tertiary: #25408B;
+@escaped-color-primary: escape(%("%s", @color-primary));
+@escaped-color-secondary: escape(%("%s", @color-secondary));
+@escaped-color-tertiary: escape(%("%s", @color-tertiary));
 @link-color: @color-primary;
 @link-hover-color: @color-primary;
