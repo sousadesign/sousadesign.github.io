@@ -1,0 +1,29 @@
+.button,
+a.button {
+  background: #ffff00;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ffff00;
+  border-radius: 6px;
+  box-shadow: none;
+  color: #ff0000;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: .3s;
+  outline: none;
+  cursor: hand;
+}
+.button:hover,
+a.button:hover,
+.button:active,
+a.button:active {
+  background: #cccc00;
+  border-color: #cccc00;
+  color: #ff0000;
+  text-decoration: none;
+}

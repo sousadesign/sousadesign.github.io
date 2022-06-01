@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-3.3.1.js"></script>
+	<title></title>
+	<style type="text/css">
+		.nav {
+		  display: flex;
+		  flex-direction: row;
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		}
+
+		.nav > li {
+		  margin: 0 1rem;
+		  overflow: hidden;
+		}
+
+		.menu-button-container {
+		  display: none;
+		  height: 100%;
+		  width: 30px;
+		  cursor: pointer;
+		  flex-direction: column;
+		  justify-content: center;
+		  align-items: center;
+		}
+
+		#menu-toggle {
+		  display: none;
+		}
+
+		.menu-button,
+		.menu-button::before,
+		.menu-button::after {
+		  display: block;
+		  background-color: #fff;
+		  position: absolute;
+		  height: 4px;
+		  width: 30px;
+		  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+		  border-radius: 2px;
+		}
+
+		.menu-button::before {
+		  content: '';
+		  margin-top: -8px;
+		}
+
+		.menu-button::after {
+		  content: '';
+		  margin-top: 8px;
+		}
+
+		#menu-toggle:checked + .menu-button-container .menu-button::before {
+		  margin-top: 0px;
+		  transform: rotate(405deg);
+		}
+
+		#menu-toggle:checked + .menu-button-container .menu-button {
+		  background: rgba(255, 255, 255, 0);
+		}
+
+		#menu-toggle:checked + .menu-button-container .menu-button::after {
+		  margin-top: 0px;
+		  transform: rotate(-405deg);
+		}
+
+		@media (max-width: 700px) {
+		  .menu-button-container {
+		    display: flex;
+		  }
+		  .nav {
+		    position: absolute;
+		    top: 0;
+		    margin-top: 122px;
+		    left: 0;
+		    flex-direction: column;
+		    width: 100%;
+		    justify-content: center;
+		    align-items: center;
+		    z-index: 99;
+		  }
+		  #menu-toggle ~ .nav li {
+		    height: 0;
+		    margin: 0;
+		    padding: 0;
+		    border: 0;
+		    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+		  }
+		  #menu-toggle:checked ~ .nav li {
+		    border: 1px solid #333;
+		    height: 4em;
+		    padding: 0.5em;
+		    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+		  }
+		  .nav > li {
+		    display: flex;
+		    justify-content: center;
+		    margin: 0;
+		    padding: 0.5em 0;
+		    width: 100%;
+		    color: white;
+		    background-color: #222;
+		  }
+		  .nav > li:not(:last-child) {
+		    border-bottom: 1px solid #444;
+		  }
+		}
+	</style>
+</head>
+<body>
+<!------------------LOGO AND MENU------------------>
+	<div id="header" class="header container-fluid">
+		<div class="container">
+			<div class="logo">
+			</div>
+			 <input id="menu-toggle" type="checkbox" /> <!--Rick-->
+			 <label class='menu-button-container' for="menu-toggle"> <!--Rick-->
+			 <div class='menu-button'></div> <!--Rick-->
+			 </label><!--Rick-->
+			<ul class="nav">
+				<li><a href="#menu" title="Menu">MENU</a></li>
+				<li><a href="#" title="Reservations">RESERVATIONS</a></li>
+				<li><a href="#" title="Locations">LOCATIONS</a></li>
+				<li> 
+					<a href="#" title="Order Online" class="button">ORDER ONLINE</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+<!------------------HERO SECTION------------------>
+	<div class="hero container-fluid">
+		<div class="container">
+			<div class="column-even text">
+				<h4>TRY OUT</h4>
+				<h3>OUR FREE RANGE</h3>
+				<h2>CRISPY CHICKEN</h2>
+			</div>
+
+			<div class="column-even img">
+				
+			</div>
+		</div>
+	</div>
+<!------------------HIGHLIGHTS------------------>
+	<div class="hightlights container">
+		<div class="cards card-1">
+			<div class="column-even content">
+				<h5>GET A FREE BEVERAGE</h5>
+				<p>By purchasing any of our  chicken tenders or chicken fingers you get a free complementary drink to enjoy all the deliciousness that awaits you at Pollos Hermanos.</p>
+				<a href="#menu"  title="Order Online" class="button">ORDER ONLINE</a>
+			</div>
+
+			<div class="column-even img"></div>
+		</div>
+		<div class="cards card-2">
+			<div class="column-even content">
+				<h5>TRY OUT OUR DELICIOUS ICE CREAM FLAVORS</h5>
+				<p>We agree, that our customers deserve a little extra. Our new flavors will make your mouth watery before the ice cream melts.</p>
+				<a href=""  title="Order Online" class="button">VIEW MENU</a>
+			</div>
+
+			<div class="column-even img"></div>
+		</div>
+	</div>
+<!------------------NEW LOCATION ANNOUNCEMENT------------------>
+	<div class="new-location container-fluid">
+		<div class="container">
+			<div class="column-even img">
+				<img src="images/pollo.png" alt="">
+			</div>
+
+			<div class="column-even content">
+				<h5>VISIT US AT OUR NEW LOCATION AT PUERTA DE ALCALÁ</h5>
+				<p>By purchasing any of our  chicken tenders or chicken fingers you get a free complementary drink to enjoy all the deliciousness that awaits you at Pollos Hermanos.</p>
+				<a href=""  title="Learn more" class="button">LEARN MORE</a>
+			</div>
+		</div>
+	</div>
+<!------------------OUR SPECIAL MENU------------------>
+	<div id="menu" class="special-menu container">
+		<h5>OUR SPECIAL MENU</h5>
+
+		<div class="tabs">
+			<ul class="tab">
+				<li class="active">ALL</li>
+				<li>DRINKS</li>
+				<li>SANDWICHES</li>
+				<li>DESERTS</li>
+			</ul>
+		</div>
+
+		<div class="specials">
+			<div class="cards card-1">
+				<div class="img">
+					<img src="images/3_Piece-Meal.png" alt="">
+				</div>
+
+				<div class="content">
+					<h6>4 PIECES MEAL</h6>
+					<p>4 Pieces Of Southern Fried Chicken, 1 Fries & 1 Drink</p>
+
+					<div class="shop">
+						<span>6.00€</span>
+
+						<div class="AddToCard button-shop">
+							<div class="icon icon-shop"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="cards card-2">
+				<div class="img">
+					<img src="images/BBQ-Fillet-Sandwich.png" alt="">
+				</div>
+
+				<div class="content">
+					<h6>BBQ FILLET</h6>
+					<p>Served with 1 Fries & 1 Drink</p>
+
+					<div class="shop">
+						<span>9.00€</span>
+
+						<div class="AddToCard button-shop">
+							<div class="icon icon-shop"></div>
+						</div>
+					</div>
+				</div>
+			</div>			<div class="cards card-3">
+				<div class="img">
+					<img src="images/Sweet-Chilli-Wrap-1.png" alt="">
+				</div>
+
+				<div class="content">
+					<h6>SWEET CHILLI WRAP</h6>
+					<p>Served with 1 Fries & 1 Drink</p>
+
+					<div class="shop">
+						<span>11.00€</span>
+
+						<div class="AddToCard button-shop">
+							<div class="icon icon-shop"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="column-third">
+				<div class="logo">
+				</div>
+				<div class="company">
+					<p>©2022 Pollos Hermanos</p>
+					<p class="terms">Privacy Policy / Terms & Conditions / Accessibility</p>
+				</div>
+			</div>
+
+			<div class="column-third">
+				<div class="about-us">
+					<h6>OPENING HOURS</h6>
+					<p>Monday – Friday: 8am – 4pm</p>
+					<p>Saturday: 9am – 5pm</p>
+				</div>
+				<div class="social-media">
+					
+				</div>
+			</div>
+
+			<div class="column-third">
+				<div class="newsletter">
+					<h6>SUBSCRIBE TO OUR NEWSLETTER</h6>
+					<p>Subscribe to the newsletter for all the latest updates</p>
+				</div>
+				<form action="action_page.php">
+					<div class="form">
+						<input type="text" placeholder="Email" name="mail" required>
+						<input type="submit" value="SIGN UP" class="button">
+					</div>
+				</form>
+			</div>
+		</div>
+	</footer>
+
+<script>
+	window.onscroll = function() {myFunction()};
+	var header = document.getElementById("header");
+	var sticky = header.offsetTop;
+	function myFunction() {
+		if (window.pageYOffset > sticky) {
+		    header.classList.add("sticky");
+		}
+		else {
+			    header.classList.remove("sticky");
+		}
+	}
+</script>
+</body>
+</html>
