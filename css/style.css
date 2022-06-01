@@ -815,9 +815,35 @@ footer .column-third .form .button {
   }
 }
 @media (max-width: 320px) {
+  .hero .container .text {
+    padding: 3em .8em;
+  }
+  .hero .container .text h4 {
+    width: 110px;
+    padding: 6px;
+    font-size: 10px;
+  }
+  .hero .container .text h3 {
+    font-size: 11px;
+  }
+  .hero .container .text h2 {
+    font-size: 34px;
+  }
+  .hero .container .img {
+    background-size: 170%;
+  }
+  .hightlights {
+    padding: 2em 1em;
+  }
   .specials .cards.card-1,
   .specials .cards.card-2,
   .specials .cards.card-3 {
     flex: 1 0 100%;
+  }
+  .special-menu .tabs ul.tab {
+    width: 90%;
+  }
+  .special-menu .tabs ul.tab li {
+    padding: 1.5em 2.5em;
   }
 }
