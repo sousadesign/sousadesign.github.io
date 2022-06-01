@@ -537,6 +537,10 @@ a.button-shop:active {
 }
 .specials .cards.card-3 .img .countdown {
   display: flex;
+  display: -webkit-flex;
+  /* old versions of Chrome/Safari/Opera */
+  display: -ms-flexbox;
+  /* IE10 */
   background: #d0102d;
   width: 122px;
   height: 35px;
